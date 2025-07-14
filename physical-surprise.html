@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Physical Surprise - Surprizo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Surprizo</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#">Admin Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>Book a Physical Surprise</h2>
+            <form action="/book-physical-surprise" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="celebration-type">Type of Celebration</label>
+                    <select id="celebration-type" name="celebration-type" required>
+                        <option value="birthday">Birthday</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="graduation">Graduation</option>
+                        <option value="retirement">Retirement</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group" id="custom-celebration-type-group" style="display: none;">
+                    <label for="custom-celebration-type">Custom Celebration Type</label>
+                    <input type="text" id="custom-celebration-type" name="custom-celebration-type">
+                </div>
+                <div class="form-group">
+                    <label for="package">Surprise Package</label>
+                    <select id="package" name="package" required>
+                        <option value="basic">Basic - ₦30,000</option>
+                        <option value="standard">Standard - ₦45,000</option>
+                        <option value="premium">Premium - ₦70,000</option>
+                        <option value="gold">Gold - ₦90,000</option>
+                        <option value="platinum">Platinum - ₦150,000</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+
+                <div id="custom-package-options" style="display: none;">
+                    <div class="form-group">
+                        <label for="cake-type">Cake Type</label>
+                        <select id="cake-type" name="cake-type">
+                            <option value="vanilla">Vanilla</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="red-velvet">Red Velvet</option>
+                            <option value="fruit">Fruit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="frame-size">Frame Size</label>
+                        <select id="frame-size" name="frame-size">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="frame-photo">Upload Photo for Frame</label>
+                        <input type="file" id="frame-photo" name="frame-photo" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="celebrant-name">Celebrant Name</label>
+                    <input type="text" id="celebrant-name" name="celebrant-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="celebrant-phone">Celebrant Phone</label>
+                    <input type="tel" id="celebrant-phone" name="celebrant-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="celebrant-address">Celebrant Address</label>
+                    <textarea id="celebrant-address" name="celebrant-address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="oriki">Oriki</label>
+                    <textarea id="oriki" name="oriki" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="surprise-date-time">Time & Date of Surprise</label>
+                    <input type="datetime-local" id="surprise-date-time" name="surprise-date-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="custom-message">Custom Message</label>
+                    <textarea id="custom-message" name="custom-message" rows="4"></textarea>
+                </div>
+
+                <div class="summary">
+                    <p>Total Amount: <span id="total-amount">₦30,000</span></p>
+                </div>
+                <div class="payment-details">
+                    <h3>Payment Details</h3>
+                    <p>Opay 7037140511 – Bakare Afeez Adepoju</p>
+                </div>
+                <div class="form-group">
+                    <label for="receipt">Upload Receipt</label>
+                    <input type="file" id="receipt" name="receipt" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="customer-service">
+            <h3>Customer Service</h3>
+            <p>
+                <i class="fas fa-phone"></i> +2347037140511
+            </p>
+            <p>
+                <i class="fab fa-whatsapp"></i> <a href="https://wa.me/2347037140511">Chat with us on WhatsApp</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> <a href="mailto:bakareafeez000@gmail.com">bakareafeez000@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/physical-surprise.js"></script>
+</body>
+</html>

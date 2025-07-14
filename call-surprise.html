@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Call Surprise - Surprizo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Surprizo</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#">Admin Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>Book a Call Surprise</h2>
+            <form action="/book-call-surprise" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="language">Language</label>
+                    <select id="language" name="language" required>
+                        <option value="ewi">Ewi Chanting (Yoruba)</option>
+                        <option value="english">English</option>
+                        <option value="hausa">Hausa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="celebrant-name">Celebrant Name</label>
+                    <input type="text" id="celebrant-name" name="celebrant-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="eulogy">Eulogy (Oriki)</label>
+                    <textarea id="eulogy" name="eulogy" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city-origin">City/Origin</label>
+                    <input type="text" id="city-origin" name="city-origin">
+                </div>
+                <div class="form-group">
+                    <label for="phone-number-1">Phone Number 1</label>
+                    <input type="tel" id="phone-number-1" name="phone-number-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number-2">Phone Number 2 (Optional)</label>
+                    <input type="tel" id="phone-number-2" name="phone-number-2">
+                </div>
+                <div class="form-group">
+                    <label for="courtesy-name">Courtesy Name</label>
+                    <input type="text" id="courtesy-name" name="courtesy-name">
+                </div>
+                <div class="form-group">
+                    <label for="custom-message">Custom Message / Instruction</label>
+                    <textarea id="custom-message" name="custom-message" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="surprise-date-time">Time & Date of Surprise</label>
+                    <input type="datetime-local" id="surprise-date-time" name="surprise-date-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration" name="duration" required>
+                        <option value="5">5 minutes – ₦5,000</option>
+                        <option value="10">10 minutes – ₦8,000</option>
+                        <option value="15">15 minutes – ₦10,000</option>
+                    </select>
+                </div>
+                <div class="summary">
+                    <p>Total Amount: <span id="total-amount">₦5,000</span></p>
+                </div>
+                <div class="payment-details">
+                    <h3>Payment Details</h3>
+                    <p>Opay 7037140511 – Bakare Afeez Adepoju</p>
+                </div>
+                <div class="form-group">
+                    <label for="receipt">Upload Receipt</label>
+                    <input type="file" id="receipt" name="receipt" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="customer-service">
+            <h3>Customer Service</h3>
+            <p>
+                <i class="fas fa-phone"></i> +2347037140511
+            </p>
+            <p>
+                <i class="fab fa-whatsapp"></i> <a href="https://wa.me/2347037140511">Chat with us on WhatsApp</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> <a href="mailto:bakareafeez000@gmail.com">bakareafeez000@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/call-surprise.js"></script>
+</body>
+</html>
