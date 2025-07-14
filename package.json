@@ -1,0 +1,15 @@
+{
+  "name": "surprizo",
+  "version": "1.0.0",
+  "description": "Surprizo website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.1",
+    "nodemailer": "^7.0.5"
+  }
+}
